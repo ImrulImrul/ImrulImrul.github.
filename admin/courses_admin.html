@@ -1,9 +1,4 @@
-<?php
-  session_start();
-  include 'server.html';
-  header("Refresh: 1800; url = login.html");
-?>
-<!Doctype html>
+<!doctype html>
 <html class="no-js" lang="zxx">
 <head>
     <meta charset="utf-8">
@@ -12,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="graphic/assets/img/favicon.ico">
 
 	<!-- CSS here -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -65,8 +60,7 @@
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="courses.html">Courses</a></li>
                                         <li><a href="instructor.html">Instructors</a></li>
-										<li><a href="quiz.html">Quiz</a>
-                                        <li><a href="blog.html">Books</a>
+                                        <li><a href="courses_admin.html">Books</a>
                                             <ul class="submenu">
                                                 <li><a href="graphicdesign.html">Graphics Design</a></li>
                                                 <li><a href="webdevelopment.html">Web Development</a></li>
@@ -154,17 +148,18 @@
                                                     </div>
                                                     <div class="course-caption">
                                                         <div class="course-cap-top">
-                                                            <h4><a href="usercoursevideo/index.html">Graphic Design</a></h4>
+                                                            <h4><a href="coursevideo/index.html">Graphic Design</a></h4>
                                                         </div>
-                                                        <div class="course-cap-mid1 d-flex justify-content-between">
-                                                            <div class="course-ratting1">
-                                                                <i class="fas fa-star" data-index="0"></i>
-                                                                <i class="fas fa-star" data-index="1"></i>
-                                                                <i class="fas fa-star" data-index="2"></i>
-                                                                <i class="fas fa-star" data-index="3"></i>
-                                                                <i class="fas fa-star" data-index="4"></i>
-                                                            </div>																				
-                                                            <ul><li>52 Review</li></ul>
+                                                        <div class="course-cap-mid d-flex justify-content-between">
+                                                            <div class="course-ratting">
+                                                                <i class="fas fa-star" ></i>
+                                                                <i class="fas fa-star" ></i>
+                                                                <i class="fas fa-star" ></i>
+                                                                <i class="fas fa-star" ></i>
+                                                                <i class="fas fa-star" ></i>
+                                                            </div>
+																																																																	
+															<ul><li>52 Review</li></ul>
                                                         </div>
                                                         <div class="course-cap-bottom d-flex justify-content-between">
                                                             <ul>
@@ -194,9 +189,7 @@
                                                                 <i class="fas fa-star" data-index="3"></i>
                                                                 <i class="fas fa-star" data-index="4"></i>
                                                             </div>
-															
                                                             <ul><li>52 Review</li></ul>
-															
                                                         </div>
                                                         <div class="course-cap-bottom d-flex justify-content-between">
                                                             <ul>
@@ -515,7 +508,7 @@
                                             </div>
                                         </div>
                                     </div>
-<!--  Three -->
+                                    <!--  Three -->
                                     <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                                         <div class="row">
                                             <div class="col-xl-4 col-lg-4 col-md-6">
@@ -700,7 +693,7 @@
                                             </div>
                                         </div>
                                     </div>
-<!--  Fur -->
+                                    <!--  Fur -->
                                     <div class="tab-pane fade" id="nav-last" role="tabpanel" aria-labelledby="nav-last-tab">
                                         <div class="row">
                                             <div class="col-xl-4 col-lg-4 col-md-6">
@@ -885,7 +878,7 @@
                                             </div>
                                         </div>
                                     </div>
-  <!--  Five -->
+                                    <!--  Five -->
                                     <div class="tab-pane fade" id="nav-nav-Sport" role="tabpanel" aria-labelledby="nav-Sports">
                                         <div class="row">
                                             <div class="col-xl-4 col-lg-4 col-md-6">
@@ -982,7 +975,7 @@
                                                 <!-- Single course -->
                                                 <div class="single-course mb-70">
                                                     <div class="course-img">
-                                                        <img src="assets/img/gallery/popular_sub2.png" alt="">
+                                                        <img src=assets/img/gallery/popular_sub2.png" alt="">
                                                     </div>
                                                     <div class="course-caption">
                                                         <div class="course-cap-top">
@@ -1069,9 +1062,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>                          
-                                    
-                                  
+                                    </div>
                                 </div>
                             <!-- End Nav Card -->
                             </div>
@@ -1097,10 +1088,15 @@
                                 <!-- Form -->
                                 <div class="footer-form mb-50">
                                     <div id="mc_embed_signup">
-                                          <a href="subscriptionform/subscribe.html"> 
-										  <button  href="subscribe.html" style="color:red; margin: 4px 2px; border-radius: 12px; margin-left:20px" >Subscribe Now </button>
-                                           </a>    
-                  
+                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                            <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                    Subscribe Now
+                                                </button>
+                                            </div>
+                                            <div class="mt-10 info"></div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -1201,103 +1197,43 @@
     </div>
 
     <!-- JS here -->
-
-<script src="http://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-                                                             <script>
-        var ratedIndex = -1, uID = 0;
-
-        $(document).ready(function () {
-            resetStarColors();
-
-            if (localStorage.getItem('ratedIndex') != null) {
-                setStars(parseInt(localStorage.getItem('ratedIndex')));
-                uID = localStorage.getItem('uID');
-            }
-
-            $('.fa-star').on('click', function () {
-               ratedIndex = parseInt($(this).data('index'));
-               localStorage.setItem('ratedIndex', ratedIndex);
-               saveToTheDB();
-            });
-
-            $('.fa-star').mouseover(function () {
-                resetStarColors();
-                var currentIndex = parseInt($(this).data('index'));
-                setStars(currentIndex);
-            });
-
-            $('.fa-star').mouseleave(function () {
-                resetStarColors();
-
-                if (ratedIndex != -1)
-                    setStars(ratedIndex);
-            });
-        });
-
-        function saveToTheDB() {
-            $.ajax({
-               url: "index.html",
-               method: "POST",
-               dataType: 'json',
-               data: {
-                   save: 1,
-                   uID: uID,
-                   ratedIndex: ratedIndex
-               }, success: function (r) {
-                    uID = r.id;
-                    localStorage.setItem('uID', uID);
-               }
-            });
-        }
-
-        function setStars(max) {
-            for (var i=0; i <= max; i++)
-                $('.fa-star:eq('+i+')').css('color', 'green');
-        }
-
-        function resetStarColors() {
-            $('.fa-star').css('color', '#EAE6A6');
-        }
-    </script>
-
-
-
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+																	
+    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="assets/js/jquery.slicknav.min.js"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/animated.headline.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
 
     <!-- Date Picker -->
-    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="assets/js/gijgo.min.js"></script>
     <!-- Nice-select, sticky -->
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.sticky.js"></script>
     
     <!-- counter , waypoint -->
-    <script src="./assets/js/jquery.counterup.min.js"></script>
-    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
     
     <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/jquery.form.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/mail-script.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
     
     <!-- Jquery Plugins, main Jquery -->	
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
     
     </body>
 </html>

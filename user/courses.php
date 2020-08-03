@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  include 'server.html';
+  header("Refresh: 1800; url = login.html");
+?>
 <!Doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -60,15 +65,15 @@
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="courses.html">Courses</a></li>
                                         <li><a href="instructor.html">Instructors</a></li>
-										<li><a href="quiz.php">Quiz</a>
+										<li><a href="quiz.html">Quiz</a>
                                         <li><a href="blog.html">Books</a>
                                             <ul class="submenu">
-                                                <li><a href="graphicdesign.php">Graphics Design</a></li>
-                                                <li><a href="webdevelopment.php">Web Development</a></li>
-                                                <li><a href="digitalmarketing.php">Digital Marketing</a></li>
-												<li><a href="healthmedicine.php">Health & Medicine</a></li>
-												<li><a href="humanities.php">Humanities</li>
-												<li><a href="socialscience.php">Social Science</a></li>
+                                                <li><a href="graphicdesign.html">Graphics Design</a></li>
+                                                <li><a href="webdevelopment.html">Web Development</a></li>
+                                                <li><a href="digitalmarketing.html">Digital Marketing</a></li>
+												<li><a href="healthmedicine.html">Health & Medicine</a></li>
+												<li><a href="humanities.html">Humanities</li>
+												<li><a href="socialscience.html">Social Science</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -149,7 +154,7 @@
                                                     </div>
                                                     <div class="course-caption">
                                                         <div class="course-cap-top">
-                                                            <h4><a href="usercoursevideo/index.php">Graphic Design</a></h4>
+                                                            <h4><a href="usercoursevideo/index.html">Graphic Design</a></h4>
                                                         </div>
                                                         <div class="course-cap-mid1 d-flex justify-content-between">
                                                             <div class="course-ratting1">
@@ -1092,8 +1097,8 @@
                                 <!-- Form -->
                                 <div class="footer-form mb-50">
                                     <div id="mc_embed_signup">
-                                          <a href="subscriptionform/subscribe.php"> 
-										  <button  href="subscribe.php" style="color:red; margin: 4px 2px; border-radius: 12px; margin-left:20px" >Subscribe Now </button>
+                                          <a href="subscriptionform/subscribe.html"> 
+										  <button  href="subscribe.html" style="color:red; margin: 4px 2px; border-radius: 12px; margin-left:20px" >Subscribe Now </button>
                                            </a>    
                   
                                     </div>
@@ -1231,7 +1236,7 @@
 
         function saveToTheDB() {
             $.ajax({
-               url: "index.php",
+               url: "index.html",
                method: "POST",
                dataType: 'json',
                data: {

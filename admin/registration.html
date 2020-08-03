@@ -1,6 +1,5 @@
 <?php
-session_start();
-     include 'server.html';header("Refresh: 1800; url = login.html");
+     include 'server.html';
 ?>
 
 <!DOCTYPE html>
@@ -41,19 +40,34 @@ session_start();
 			<div class="login100-more" style="background-image: url('images/bg-01.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form" action="" method="post">
+				<form class="login100-form validate-form" action="registration.html" method="post">
 					<span class="login100-form-title p-b-59">
-						Update Your Password
+						Sign Up
 					</span>
-					
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<span class="label-input100">Old Password</span>
-						<input class="input100" type="password" name="opassword" placeholder="*************">
+
+                    <div class="wrap-input100 validate-input" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="Username...">
 						<span class="focus-input100"></span>
 					</div>
 					
+					  <div class="wrap-input100 validate-input" data-validate="Phone is required">
+						<span class="label-input100">Phone</span>
+						<input class="input100" type="text" name="phone" placeholder="Phone...">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="email" placeholder="Email address...">
+						<span class="focus-input100"></span>
+					</div>
+
+                  
+					
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<span class="label-input100">New Password</span>
+						<span class="label-input100">Password</span>
 						<input class="input100" type="password" name="password" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
@@ -83,42 +97,50 @@ session_start();
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button name="change" class="login100-form-btn" type="submit">
-								Change
+							<button name="signup" class="login100-form-btn" type="submit">
+								Sign Up
 							</button>
 						</div>
 
+						<a href="login.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+							Sign in
+							<i class="fa fa-long-arrow-right m-l-5"></i>
+						</a>
 					</div>
 				</form>
 <?php
-$chg_pwd=mysqli_query($con,"select * from user where username = '" . $_SESSION['username'] . "'");
-		$chg_pwd1=mysqli_fetch_array($chg_pwd);
-		
-		
-		
-    if(isset($_POST['change'])){
-$opassword=$_POST['opassword'];
-$password=$_POST['password'];
-$cpassword=$_POST['cpassword'];
-$data_pwd=$chg_pwd1['password'];
-
-if($data_pwd==$opassword){
-if($password==$cpassword){
-$update_pwd=mysqli_query($con,"update user set password='$password' where username = '" . $_SESSION['username'] . "'");
-echo '<script type = "text/javascript"> alert("Update Sucessfully !!!") </script>' ;
-//$change_pwd_error="Update Sucessfully !!!";
-}
-else{
-	echo '<script type = "text/javascript"> alert("Your new and Retype Password is not match !!!") </script>' ;
-//$change_pwd_error="Your new and Retype Password is not match !!!";
-}
-}
-else
-{
-	echo '<script type = "text/javascript"> alert("Your old password is wrong !!!") </script>' ;
-//$change_pwd_error="Your old password is wrong !!!";
-}
-}
+    if(isset($_POST['signup'])){
+	  echo '<script type = "text/javascript"> alert("Sign Up button clicked") </script>' ;
+  	$username = $_POST['username'];
+	$phone = $_POST['phone'];
+  	$email = $_POST['email'];
+  	$password = $_POST['password'];
+  	$cpassword = $_POST['cpassword'];
+	  	if ($password==$cpassword) {
+	  		$query = "select * from user WHERE username = '$username' ";
+			$query_run = mysqli_query($con,$query);
+			
+			    if(mysqli_num_rows($query_run)>0){     
+					 
+					 echo '<script type = "text/javascript"> alert("Email is already exists try another") </script>' ;			 
+				}
+				else
+				{
+				     $query = "INSERT INTO user(username,phone,email,password) VALUES('$username','$phone','$email','$password')"; 
+					 $query_run = mysqli_query($con,$query);
+					 if($query_run){
+					      echo '<script type = "text/javascript"> alert("User registered......go to login page") </script>' ;
+					 }
+					 else{
+						 echo '<script type = "text/javascript"> alert("Error!!!") </script>' ;
+					 }
+				}
+	  		}
+			else{
+				echo '<script type = "text/javascript"> alert("Password & Confirm password does not match ") </script>' ;
+			}
+	  	
+    }
 
  ?>
 			</div>
